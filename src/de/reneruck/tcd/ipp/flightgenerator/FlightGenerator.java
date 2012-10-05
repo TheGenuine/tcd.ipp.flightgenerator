@@ -12,9 +12,7 @@ import org.apache.commons.io.FileUtils;
 
 public class FlightGenerator {
 
-	private static int TwentyFourHoursHinMs = 86400000;
 	private static long oneHourInMs = 3600000;
-	private static List<Date> flightTimes = new LinkedList<>();
 	private static List<String> flightStatements = new LinkedList<>();
 
 	public static void main(String[] args) {
@@ -39,7 +37,6 @@ public class FlightGenerator {
 						calendar.add(Calendar.HOUR_OF_DAY, -3);
 					}
 					System.out.println(formater.format(calendar.getTime()));
-					flightTimes.add(calendar.getTime());
 					generateSQLStatement(calendar, flightStatements);
 					printToFile(flightStatements);
 				}
