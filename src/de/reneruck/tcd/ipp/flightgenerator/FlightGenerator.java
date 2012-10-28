@@ -20,7 +20,7 @@ public class FlightGenerator {
 		Calendar calendar = Calendar.getInstance();
 
 		try {
-			Date parsedDate = formater.parse("28.10.2012 21:00");
+			Date parsedDate = formater.parse("25.02.2013 21:00");
 			Date now = new Date(System.currentTimeMillis());
 
 			calendar.setTime(parsedDate);
